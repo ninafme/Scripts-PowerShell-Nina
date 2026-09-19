@@ -83,3 +83,11 @@ Ao escolher a opção `M`, a pasta `D:\Duplicata` será criada automaticamente c
 ## Observações
 
 Este script foi desenvolvido para meu uso próprio e deve ser utilizado com cuidado, principalmente nas opções `M` e `R`, pois elas alteram a localização ou excluem arquivos do computador.
+
+## Segurança na identificação de duplicatas
+
+O script utiliza o hash SHA256 para comparar o conteúdo dos arquivos. Esse processo funciona de maneira semelhante a uma impressão digital do arquivo: se qualquer informação for alterada, mesmo um único bit no cabeçalho ou no conteúdo, o hash também será alterado.
+
+Por isso, arquivos apenas semelhantes, com nomes iguais ou com pequenas diferenças não são considerados duplicatas. O arquivo só é tratado como duplicata quando possui o mesmo conteúdo do arquivo de referência.
+
+Essa abordagem é mais segura do que uma comparação baseada apenas no nome, na extensão ou no tamanho do arquivo, reduzindo o risco de excluir arquivos diferentes por engano.
