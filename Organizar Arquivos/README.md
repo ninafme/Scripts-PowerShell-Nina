@@ -32,8 +32,7 @@ A opção de remoção exclui arquivos reais do computador. Antes de utilizar es
 - testar primeiro com a opção `V`
 - usar a opção `M` se quiser apenas separar os arquivos antes de excluir
 
-Arquivos semelhantes mais de tamanhos diferentes, cabeçalhos de dados com bits diferentes, etc acabam não sendo considerados duplicatas pelo programa, 
-já que identifica arquivos idênticos bit a bit, de forma semelhante a uma assinatura digital.
+Arquivos visualmente semelhantes, mas com tamanhos ou conteúdos diferentes, não são considerados duplicatas. O script identifica arquivos com conteúdo idêntico, comparando-os por meio do hash SHA256, de forma semelhante a uma assinatura digital.
 
 ## Funcionamento 
 
@@ -79,7 +78,7 @@ Durante a execução, as informações são exibidas em tempo real no PowerShell
 - **Amarelo:** mensagens relacionadas à opção de mover ou a avisos;
 - **Verde:** confirmações e conclusão da execução.
 
-Ao escolher a opção `M`, a pasta `D:\Duplicata` será criada automaticamente caso ainda não exista, e caso possua unidade `D:\` no computador.
+Ao escolher a opção `M`, a pasta `D:\Duplicata` será criada automaticamente caso ainda não exista. Porém para que isso ocorra, a unidade `D:` precisa estar disponível no computador.
 
 ## Observações
 
